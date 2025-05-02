@@ -3,15 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-  "dev": "next dev --turbopack",
-  "build": "next build",
-  "start": "next start",
-  "lint": "next lint",
-  "server": "nodemon"
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "server": "nodemon",
+    "all": "concurrently --names \"client,server\" \"pnpm dev\" \"pnpm run server\"",
+    "lint": "next lint"
   },
   "dependencies": {
     "aws-crt": "^1.26.2",
     "aws-iot-device-sdk-v2": "^1.21.3",
+    "concurrently": "^9.1.2",
     "next": "15.3.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
