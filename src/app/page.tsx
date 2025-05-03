@@ -49,7 +49,6 @@ export default function ChatPage() {
     <div className="p-6 max-w-xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">MQTT Chat</h1>
       <div className="text-sm text-gray-500 mb-2">
-        <p>AWS_IOT_ENDPOINT=a1hioq4h0mxkey-ats.iot.ap-northeast-1.amazonaws.com
         AWS_IOT_TOPIC=keybox/event/company_01/box_01/status
         AWS_IOT_TOPIC_SUBSCRIBE=keybox/action/company_01/box_01/lock_command</p>
       </div>
