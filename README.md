@@ -1,7 +1,7 @@
 Demo MQTT chat app.
 
 ## Setting
-Copy certificate and key to certss folder
+Copy certificate and key to certs folder
 ```
 certs
 ├── keybox-01.cert.pem
