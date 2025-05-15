@@ -34,7 +34,7 @@ export default function ChatPage() {
   };
 
   useEffect(() => {
-    const socket = new WebSocket('ws://localhost:3001');
+    const socket = new WebSocket('ws://localhost:4001');
 
     socket.onmessage = (event) => {
       const timestamp = new Date().toISOString();

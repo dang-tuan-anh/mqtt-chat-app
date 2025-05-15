@@ -2,7 +2,7 @@ import { createServer } from 'http';
 import { initWebSocketServer } from './lib/wsServer';
 import next from 'next';
 
-const port = 3001;
+const port = 4001;
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
