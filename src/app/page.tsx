@@ -104,6 +104,12 @@ export default function ChatPage() {
             }}
           />
           <div className="flex items-center justify-between text-xs text-gray-500 mb-2">
+            <button
+              className="bg-red-600 text-white px-6 py-2 rounded cursor-pointer text-sm"
+              onClick={() => setLogs([])}
+            >
+              Clear Logs
+            </button>
             <span>Press Shift + Enter to send</span>
             <button
               className="bg-blue-600 text-white px-6 py-2 rounded cursor-pointer text-sm"
