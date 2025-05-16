@@ -16,7 +16,7 @@ export function initWebSocketServer(server: HttpServer) {
     clients.add(ws);
 
     ws.on('message', (message) => {
-      console.log('📥 Received message:', message.toString());
+      // console.log('📥 Received message:', message.toString());
       publishMessage(message.toString());
     });
     ws.on('close', () => {

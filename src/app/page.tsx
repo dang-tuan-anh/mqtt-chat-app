@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { config } from '../app.config'; // Adjust the path based on the actual location of app.config
 
 export default function ChatPage() {
   const message = `{
@@ -65,8 +66,8 @@ export default function ChatPage() {
       <h1 className="text-2xl font-bold mb-2">MQTT Chat</h1>
       <div className="text-sm text-gray-500 mb-4">
         <p>
-          AWS_IOT_TOPIC=keybox/event/company_01/box_01/status <br />
-          AWS_IOT_TOPIC_SUBSCRIBE=keybox/action/company_01/box_01/lock_command
+          AWS_IOT_TOPIC_PUBLISH= {config.AWS_IOT_TOPIC_PUBLISH} <br />
+          AWS_IOT_TOPIC_SUBSCRIBE= {config.AWS_IOT_TOPIC_SUBSCRIBE} <br />
         </p>
       </div>
 
