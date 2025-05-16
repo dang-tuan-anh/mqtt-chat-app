@@ -1,14 +1,19 @@
 import { mqtt, iot } from 'aws-iot-device-sdk-v2';
 import { TextDecoder } from 'util';
 import { broadcastMessage } from './wsServer';
+import { config } from '../app.config';
 
 const decoder = new TextDecoder('utf-8');
 
 let client: mqtt.MqttClient | null = null;
 let connection: mqtt.MqttClientConnection | null = null;
 
-const publishTopic = 'keybox/event/company_01/box_01/status';
-const subscribeTopic = 'keybox/action/company_01/box_01/lock_command';
+const publishTopic = config.AWS_IOT_TOPIC_PUBLISH;
+const subscribeTopic = config.AWS_IOT_TOPIC_SUBSCRIBE;
+if (!publishTopic || !subscribeTopic) {
+  throw new Error('Environment variables for MQTT topics are not set.');
+}
+console.log('subscribeTopic', subscribeTopic);
 
 export async function getMqttConnection(): Promise<mqtt.MqttClientConnection> {
   if (connection) return connection;
