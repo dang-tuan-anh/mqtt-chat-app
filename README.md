@@ -21,5 +21,5 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-<img width="1267" alt="Screenshot 2025-05-16 at 16 54 26" src="https://github.com/user-attachments/assets/3d78afce-9226-4762-8dd6-fc945269c479" />
+<img width="1273" alt="Screenshot 2025-05-16 at 17 49 21" src="https://github.com/user-attachments/assets/aeaf8174-e28e-4001-9af3-7b7f9ba20bd4" />
 
