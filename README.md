@@ -14,10 +14,6 @@ certs
 Run client and server currently
 
 ```bash
-export AWS_PROFILE=dev@keybox
-aws sso login
-# check login account
-aws sts get-caller-identity 
 pnpm all
 ```
 
