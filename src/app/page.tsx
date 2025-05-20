@@ -5,7 +5,7 @@ import { config } from '../app.config'; // Adjust the path based on the actual l
 
 export default function ChatPage() {
   const message = `{
-  "company_id": "aktio",
+  "company_id": "company01",
   "box_id": "key_box01",
   "fw_ver": "1.0.0",
   "sent_at": "2025-01-01T00:00:00+09:00",
