@@ -18,16 +18,16 @@ console.log('subscribeTopic', subscribeTopic);
 export async function getMqttConnection(): Promise<mqtt.MqttClientConnection> {
   if (connection) return connection;
 
-  const config = iot.AwsIotMqttConnectionConfigBuilder
+  const mqttConfig = iot.AwsIotMqttConnectionConfigBuilder
     .new_mtls_builder_from_path('certs/keybox-01.cert.pem', 'certs/keybox-01.private.key')
     .with_certificate_authority_from_path(undefined, 'certs/root-CA.crt')
     .with_clean_session(true)
     .with_client_id('nextjs-backend-client-' + Math.floor(Math.random() * 1000))
-    .with_endpoint(process.env.AWS_IOT_ENDPOINT || '')
+    .with_endpoint(config.AWS_IOT_ENDPOINT || '')
     .build();
 
   client = new mqtt.MqttClient();
-  connection = client.new_connection(config);
+  connection = client.new_connection(mqttConfig);
 
   await connection.connect();
   
